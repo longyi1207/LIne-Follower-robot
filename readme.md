@@ -23,9 +23,9 @@ search_bot = search_top + 20
 
 #### The robot will continue moving when there's yellow line in the view
 if M['m00'] > 0:
-	# don't really undersand how M works, but based on chatgpt
-        cx = int(M['m10']/M['m00']) + 100
-        cy = int(M['m01']/M['m00'])
+-# don't really undersand how M works, but based on chatgpt
+-cx = int(M['m10']/M['m00']) + 100
+-cy = int(M['m01']/M['m00'])
 	# plot a centroid of the line
         cv2.circle(image, (cx, cy), 20, (0,0,255), -1)
 	# calculate the deviation of the robot from the centrod
